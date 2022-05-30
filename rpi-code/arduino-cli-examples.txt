@@ -1,0 +1,2 @@
+arduino-cli compile --fqbn pololu-a-star:avr:a-star328PB MySketch/
+arduiuno-cli upload -p /dev/ttyUSB0 --fqbn pololu-a-star:avr:a-star328PB MySketch/
