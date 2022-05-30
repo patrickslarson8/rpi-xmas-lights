@@ -1,3 +1,8 @@
+# This code is used to turn the arduino RGB output on or off at
+# a specified time of day. The raspberry pi sends a single unicode
+# letter which the arduino then interprets to switch between
+# a pre-programmed string or all black output
+
 #!/usr/bin/env python3
 import serial
 import time
