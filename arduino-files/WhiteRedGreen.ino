@@ -1,4 +1,4 @@
-# Creates a simple fixed output lights to simulate traditional light strands
+// Creates a simple fixed output lights to simulate traditional light strands
 
 #include <FastLED.h>
 
