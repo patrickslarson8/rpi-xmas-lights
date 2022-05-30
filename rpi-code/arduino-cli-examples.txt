@@ -1,2 +1,8 @@
+# These commands are used to compile arduino files into firmwares 
+# that can be uploaded to the device. For more information see:
+# https://github.com/arduino/arduino-cli
+
+
+
 arduino-cli compile --fqbn pololu-a-star:avr:a-star328PB MySketch/
 arduiuno-cli upload -p /dev/ttyUSB0 --fqbn pololu-a-star:avr:a-star328PB MySketch/
