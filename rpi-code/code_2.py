@@ -1,3 +1,7 @@
+# Example code to control RGB lights with only the Raspberry Pi.
+# This works but is not ideal as the Rpi does not use a real time OS
+# causing RGB artifacts
+
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 
