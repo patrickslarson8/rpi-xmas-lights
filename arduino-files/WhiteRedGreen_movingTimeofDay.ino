@@ -1,3 +1,7 @@
+// This code outputs a light pattern of Red, Green, and White, and moves that pattern
+// one bulb down the strip. When it receives unicode "GO" over the serial 
+// connection it will begin output. Anything else will stop the output.
+
 #include <FastLED.h>
 
 #define LED_PIN     6
@@ -9,9 +13,16 @@
 CRGB leds[NUM_LEDS];
 
 #define BRIGHTNESS      52 //default was 128
+
+// I had a section of lights that overlapped with another section due to the configuration
+// of my roof. Setting these values turned those lights off so you could not seem them at night
 #define LED_DEAD_START  109
 #define LED_DEAD_STOP   123
+
+
 #define TEMPERATURE     UncorrectedTemperature
+
+// A yellow-ish color intended to mimic the glow of incandescent bulbs (it does not)
 #define MEGAN_WHITE     0xc9b96f
 
 int DELAY_TIME = 2000;
@@ -19,9 +30,8 @@ String data = "Go";
 
 int counter = 0;
 int offset = 0;
+
 void loop() {
-    //receive color for megan white
-    //?receive brightness for different colors?
   if (Serial.available() > 0) {
     data = Serial.readStringUntil('\n');
     Serial.println(data);
