@@ -1,1 +1,5 @@
+# This command is used to flash an arduino firmware file (.hex)
+# from a raspberry pi
+# requires avrdude to be installed (https://learn.adafruit.com/program-an-avr-or-arduino-using-raspberry-pi-gpio-pins/installation)
+
 sudo avrdude -c linuxspi -p m328pb -P /dev/spidev0.0 -U flash:w:/tmp/arduino_build_199867/Blink.ino.hex
